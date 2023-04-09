@@ -3,7 +3,6 @@ import Layout from '../../components/Layout/Layout'
 import { useNavigate,useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios"
-import Toaster from "react-hot-toast"
 import "../../styles/AuthStyles.css"
 import { useAuth } from '../../context/Auth';
 

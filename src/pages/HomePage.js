@@ -91,10 +91,6 @@ const HomePage = () => {
     if (!checked.length || !radio.length) getAllProducts();
   }, [checked.length, radio.length]);
 
-  useEffect(() => {
-    if (checked.length || radio.length) filterProduct();
-  }, [checked, radio]);
-
   //get filterd product
   const filterProduct = async () => {
     try {
@@ -107,13 +103,18 @@ const HomePage = () => {
       console.log(error);
     }
   };
+  
+  useEffect(() => {
+    if (checked.length || radio.length) filterProduct();
+  }, [checked, radio]);
+
   return (
     <Layout title={"ALl Products - Best offers "}>
       {/* banner image */}
       <img
-        src="/images/banner.png"
-        className="banner-img"
-        alt="bannerimage"
+        src=""
+        className=""
+        alt=""
         width={"100%"}
       />
       {/* banner image */}
@@ -193,6 +194,8 @@ const HomePage = () => {
                     >
                       ADD TO CART
                     </button>
+
+                    
                   </div>
                 </div>
               </div>

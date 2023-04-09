@@ -14,12 +14,9 @@ const About = () => {
       </div>
       <div className="col-md-4">
         <p className="text-justify mt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          officiis obcaecati esse tempore unde ratione, eveniet mollitia,
-          perferendis eius temporibus dicta blanditiis doloremque explicabo
-          quasi sunt vero optio cum aperiam vel consectetur! Laborum enim
-          accusantium atque, excepturi sapiente amet! Tenetur ducimus aut
-          commodi illum quidem neque tempora nam.
+       <h1>PRODUCT CATALOG</h1>
+Contains all commercial product information that enables product marketing managers to define and map new product offerings.
+ This encompasses certain sets of tools that allow configuration of new products and service bundles, pricing and discounts.
         </p>
       </div>
     </div>
