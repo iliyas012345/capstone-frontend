@@ -1,7 +1,5 @@
 {
   "name": "my-app",
-  "proxy": "https://capstone-backend2-5ebf.onrender.com",
-
   "version": "0.1.0",
   "private": true,
   "dependencies": {
