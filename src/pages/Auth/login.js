@@ -89,6 +89,12 @@ const Login = () => {
           LOGIN
         </button>
       </form>
+      <p>user email id:uesr@gmail.com
+        password:1234567
+      </p>
+      <p>admin email id:admin@gmail.com
+        password:1234567
+      </p>
     </div>
   </Layout>
   )
