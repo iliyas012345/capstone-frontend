@@ -17,7 +17,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/v1/auth/register", {
+      const res = await axios.post("https://capstone-backend2-5ebf.onrender.com/api/v1/auth/register", {
         name,
         email,
         password,

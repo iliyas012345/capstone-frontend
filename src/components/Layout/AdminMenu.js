@@ -14,19 +14,19 @@ const AdminMenu = () => {
           Create Category
         </NavLink>
         <NavLink
-          to="/dashboard/admin/create-product"
+          to="https://capstone-backend2-5ebf.onrender.com/dashboard/admin/create-product"
           className="list-group-item list-group-item-action"
         >
           Create Product
         </NavLink>
         <NavLink
-          to="/dashboard/admin/products"
+          to="https://capstone-backend2-5ebf.onrender.com/dashboard/admin/products"
           className="list-group-item list-group-item-action"
         >
           Products
         </NavLink>
         <NavLink
-          to="/dashboard/admin/orders"
+          to="https://capstone-backend2-5ebf.onrender.com/dashboard/admin/orders"
           className="list-group-item list-group-item-action"
         >
           Orders
