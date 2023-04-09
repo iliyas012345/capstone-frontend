@@ -23,7 +23,7 @@ const HomePage = () => {
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await fetch.get("/api/v1/category/get-category");
+      const { data } = await axios.get("/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -40,7 +40,7 @@ const HomePage = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await fetch.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
       setLoading(false);
       setProducts(data.products);
     } catch (error) {
@@ -52,7 +52,7 @@ const HomePage = () => {
   //getTOtal COunt
   const getTotal = async () => {
     try {
-      const { data } = await fetch.get("/api/v1/product/product-count");
+      const { data } = await axios.get("/api/v1/product/product-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -68,7 +68,7 @@ const HomePage = () => {
   const loadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await fetch.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
       setLoading(false);
       setProducts([...products, ...data?.products]);
     } catch (error) {
@@ -91,10 +91,14 @@ const HomePage = () => {
     if (!checked.length || !radio.length) getAllProducts();
   }, [checked.length, radio.length]);
 
+  useEffect(() => {
+    if (checked.length || radio.length) filterProduct();
+  }, [checked, radio]);
+
   //get filterd product
   const filterProduct = async () => {
     try {
-      const { data } = await fetch.post("/api/v1/product/product-filters", {
+      const { data } = await axios.post("/api/v1/product/product-filters", {
         checked,
         radio,
       });
@@ -103,11 +107,6 @@ const HomePage = () => {
       console.log(error);
     }
   };
-  
-  useEffect(() => {
-    if (checked.length || radio.length) filterProduct();
-  }, [checked, radio]);
-
   return (
     <Layout title={"ALl Products - Best offers "}>
       {/* banner image */}
